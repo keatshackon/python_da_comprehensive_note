@@ -1,0 +1,971 @@
+
+=========================================================== LECTURE 1 ========================================================
+
+1>  WE NEED TO DECLARE THE FUNCTION FIRST BEFORE CALLING IT BECOZ PYTHON IS A INTERPRETER LANGUAGE IT READS/EXECUTES CODE LINE BY LINE SO WHEN WE CALL THE FUNCTION IT
+    MUST BE IN MEMORY.
+
+2>  IDLE : INTEGRATED DEVELOPEMENT AND LEARNING ENVIRONMENT.
+
+3>  IF U ASSIGN A VARIABLE OF SAME VALUE IT WON'T TAKE 2 DIFFERENT LOCATION RATHER IT WILL ASSIGN THE  VALUE TO SAME MEMORY LOCATION. BUT-BUT IT IS ONLY FOR SMALL INT 
+    LIKE 256 AND SMALL STRING OTHERWISE ALLOCATION WILL BE AT DIFFERENT PLACE.
+
+4>  PYTHON VARIABLE IS CASE SENSITVE NAME, Name AND name is three DIFFERENT VARIABLE.
+
+5>  RESERVED KEYWORD CANNOT BE USED AS NORMAL VAIRABLE.
+
+
+============================================================ LECTURE 2 =======================================================
+
+1>  THERE ARE 35 KEYWORD IN PYTHON LANGUAGE.
+
+2>  
+
+
+
+
+============================================================ LECTURE 3 ========================================================
+
+1>  range(start(optional), end(mandatory){excluding this value}, step(optional)).
+
+2>  range(-5) will be empty list 
+
+3>  range(-5, 0) : -5 -4  -3 -2 -1 
+
+4>  range value only can be acceptable as the  integer not float
+
+5>  range(0, -5, -1) // -1 -2 -3 -4
+
+
+6>  s = {1,2,3} ans s1 = ((1,2,3)) both can use to intialize the set.
+
+7>  s = {1,2,2.0,3.0, "RBR"} is a Valid set also here 
+    2 and 2.0 consider to be equal so set treat it as duplicate so it wiilll removed from answer 
+
+8>  Indexing don't work means if I want to take something from set that's by giving the subscript it like s[2] will give the error
+
+9>  set insert the element in order means if the 2.0 come fitst then 2 come then it will add 2.0 in the result rather than 2
+
+10> S = {False, 1.2 , 1 , True, 4,6} // False, 1.2, 1, 4, 6.
+    1  come first in the set so true is not printed
+
+11> we cannot change the item in the set but we can remove the item  or add the item 
+
+12> set a mutable means if we add any item to the set it will not change their memory location
+
+13> we cannot add a list to the set but we can add a tuple to set
+
+14> also we cannot insert set under same set 
+
+15> we cannot insert any mutable data type like list or set or dictionary inside set but we can insert immutable data typlle like tuple inside the set
+
+16> FROZEN SET ARE UNORDERD,NON-DUPLICATE AND IMMUTABLE DATA TYPES, UNORDERD MEANS THE ORDER OF INSERTION OF ITEM WILL NOT BE SAME IN RESULT.
+
+17> IN FROZEN SET WE CAN'T ADD AND REMOVE THE ELEMENT.
+
+
+
+
+18> BEFORE VERSION 3.7 DICTIONARY WAS AN UNORDERD BUT AFTER THIS VERSION IT IS ORDERED MEANS THE ORDER OF ENTRY IN DICTIONARY WILL PRINT IN SAME ORDER.
+
+19> DON'T ALLOW THE DUPLICATE AND IT IS CHANGEABLE AND ALSO MUTABLE DATA TYPE MEANS IT DOES NOT CHANGE THE LOCATION WHEN ADDED NEW ITEM.
+
+20> ALSO IF U TRY TO UPDATE THE ITEM WHICH ALREADY IN DICTIONARY THE IT WILL UPDATE THE VALUE.
+
+21> DICTIONARY CANNOT HAVE UNSHABLE(MUTABLE TYPE) DATA TYPE LIKE LIST,DICTIONARY,SET IN THE KEY PART OF DICTIONARY BUT IT CAN BE IN VALUE PART.
+
+22> ALSO BUT IMMUTABLE DATA TYPE CAN BE IN KEY/ VALUE PART OF DICTIONARY LIKE tuple
+    TUPLE.
+
+
+
+23> IF U CREATE A VALUE BOOL TYPE AND IF IT ASSIGN A VALUE TRUE AND FALSE AFTERWARD U CREATE THE ANOTHER VALUE THEN IT WILL REFERENCE THE SAME LOCATION.
+
+    a = bool([])
+    b = bool("")
+    c = bool(False)  then all the variable denote the same memory LOCATION
+
+========================================================== LECTURE 4 ========================================================
+
+1>  WHILE TYPE CASTING VIA INT() WE MUST PASS THE STRING WHOSE NUMBERIC IN NATURE BUT FOR FLOAT WE CAN PASS INTEGER AS WELL AS DECMIAL VALUE LIKE 18.3
+
+2>  STR() CAN TAKE INTERGER AS WELL AS FLOAT VALUE
+
+3>  -7//2 WILL BE -4 NOT -3 IN PYTHON
+
+4>  PRINT(8 AND 12 AND 10)  // PRINT 10
+
+5>  PRINT(9 AND 0 AND 45) // PRINT 0
+
+========================================================= LECTURE 5 OPERATOR PRECEDENCE ========================================================
+
+1>  NEGATIVE NUMBER STORED IN COMPUTER IS IN 2'S COMPLIMENT FORM.
+
+2>  ~N = -(N+1)  ==> ~12 = -13
+
+3>  ~-N = -(-N+1) ==> ~-14 = 13
+
+4>  N<<K == N*POW(2,K)   AND N>>K == N//POW(2,K)
+
+5>  MEMBERSHIP OPERATOR 'IN'  AND 'IN NOT' CHECK WEATHER VALUE PRESENT IN DATA STRUCTURE OR NOT respectively.
+    S = (1,2,3)
+    1 IN S // TRUE AS 1 IS TRAEATED AS TRUE IN THIS CASE BUT IF THERE IS NOT 1 THEN IT WILL RETURN FALSE.
+
+6>  IDENTITY OPERATOR CHECK TWO OBJECT HAVE SAME MEMORY LOCATION AND IT IS DONE BY IS OPERATOR
+
+7>  JUST SEE THE OPERATOR PRECENDECY TABLE FROM GOOGLE OR NOTES.
+
+
+
+========================================================= LECTURE 6 UNICODE AND CONDITIONAL STATEMENT ========================================================
+
+1>  10>7==8<12 // FALSE  BECOZ PYTHON INTERNALLY INTERPRET THIS THING LIKE (10>7) and (7 == 8) and (8 < 12) ==> true and false and true ==> false
+
+2>  (10 > 7) == 8 < 12 // False ==> True == 8 < 12 here in python true means 1 only so it false
+
+3>  bool(8) = TRue but it not like 8 == TRue
+
+4>  IN PYTHON FALSE MEANS 0  OR 0.0 AND TRUE MEANS 1 OR 1.0
+
+
+
+========================================================= LECTURE 7 LOOPS =============================================================================
+
+1>  UNICODE TO CHARACTER USE char(97) and CHARACTER TO UNICODE USE ord('A')
+
+2>  IF U WANT TO PRINT THE LIST IN REVERSE ORDER USING RANGE FUNCTION THEN USE THIS PEICES OF CODE
+
+    list = ["keats","salazar","tom"]
+    for i in range(len(list)-1,-1,-1):
+        print(i)
+
+    also u can use this code for printing in reverse order
+
+    for i in range(-len(list),0):
+        print(i)
+
+3>  for a,b,c,d in zip(l1,l2,l3,l4):
+        print(a,b,c,d)
+
+4>  ZIP UNPACKED ALL THE LISTS AND GIVE THE OUTPUT, IF LENGTH OF ALL LIST ARE VARYING THEN MINIMUM OF THOSE WILL BE CONSIDERE WHILE GIVING THE ANSWER.
+    WE CAN TAKE ANY DATA STRUCTURE/ITERABLE RATHER THAN ALL LISTS.
+ 
+5>  --> USE FOR LOOP WHEN ITERATING THROUGH SOME SEQUENCE(EITHERE LIST,TUPLE,STRING,SET OR DICTIONARY)
+    --> USE WHILE LOOP WHEN WE NEED TO CHECK SOME CONDITION, ALSO WHEN WE ARE NOT SURE ABOUT THE NUMBER OF ITERATION THEN WE GO FOR WHILE LOOP.
+
+
+========================================================= LECTURE 8 PS ON LOOPS[BREAK,CONTINUE AND PASS] ===================================================
+
+1>  BREAK AND CONTINUE STATEMENT SHOULD BE IN LOOP.
+
+2>  CONTINUE STATEMENT DOES NOT TERMINATE THE LOOP IT JUST JUMP AND DOSE NOT GO BELOW STATEMENT.
+
+3>  IF, 'ELSE' BLOCK OF FOR LOOP IS NOT EXECUTED  THEN THERE MUST BE A BREAK STATEMENT IN FOR LOOP.
+
+4>  FOR CONTINUE ELSE BLOCK OF FOR WILL BE EXECUTED THER IS NO ANY RESTRICTION WITH CONTINUE AND PASS STATEMENT.
+
+5>  EACH FOR LOOP HAVE THERE OWN BREAK STATEMENT THEN ONLY IT GETS EXECUTED. SEE THE EXAMPLE BELOW HERE OR IS POSSIBLE SEE 10 MIN VIDEOS.
+
+    l = [[1,2,3,4,5], [5,3,3,3]]
+    for curr_list in l:
+        for value in curr_list:
+            if value == 5: 
+                break;
+        else:
+            print("else block of inner for loop")
+    else:
+        print("else block of outer for loop")
+    
+    print("outside of complete for loop")
+
+    //output:  else block of innner for loop
+                else block of outer for loop   
+                outside of complete for loop.
+
+6>  HAVING IF CONDITION IS NOT ENOUGH THERE MUST BE BREAK STATEMENT IF I WANT TO THAT ELSE BLOCK OF LOOP NOT GET EXECUTED.
+
+    REAMRK:  JUST FOCUS ON ELSE BLOCK FOR BOTH LOOP WHILE AND FOR.
+
+
+========================================================= LECTURE 9 MASTERING STRING OPERATION ========================================================
+
+1>  '+' IS USED TO CONCATANATE THE TWO STRING TOGETHER
+
+2>  '*' REPITITION OPERATOR USED TO MULTIPLE THE TWO STRING.
+
+3>  IF WE MULTIPLY THE STRING WITH 0 THEN EMPTY STRING WILL BE PRINTED AND IF MULTIPLIED BY NEGATIVE NUMBER THEN ALSO EMPTY STRING PRINTED.
+
+4>  COMPARISON OPERATOR COMPARE CHARACTER BY CHARACTER AND LOOK FOR UNICODE VALUE BASED ON THIS RETURN BOOLEAN VALUE.
+
+5>  IN AND NOT IN MEMBERSHIP OPERATOR LOOKS FOR SUBSTRING IN GIVEN STRING.
+
+6>  \b REMOVED THE PREVIOUS SINGEL CHARACTER.
+
+7>  \000[MUST BE EXACTLY 3 NUMBER] THIS REPRESENT THE OCTAL NUMBER. IF TRY TO GIVE MORE THAN  TWO NUMBER THEN FIRST THREE NUMBER TAKE AS OCTAL NUMBER OTHER GET 
+    APPENDED AS IT IS.
+
+8>  \X IS USED FOR HEXADECIMAL.
+
+9>  print("My Name is %s and my age is %d"%(name,age))  where name and age are variable. and %d expect for integer.
+
+10> %f for float value in string formatting.
+
+11> string[start:end:step] also step dosen't take 0 value. ALSO END INDEX DOESN'T INCLUDED.
+
+12> WE CAN GIVE THE END INDEX MORE THAN LENGTH OF STRING IT WON'T THROW OUT OF INDEX ERROR.
+
+13> ALSO NEGATIVE INDEX IN STEP WILL MOVE THE START INDEX BY -2.
+
+14> s[-19:-13:-1] will print nothing.
+
+15> s[::-1] to reverse the string
+
+16> s[::-1][::-1] means double reversla means orginal string
+
+17> print("My name is {} and I'm {} years old.".format(name, age))
+
+18> print("My name is {1} and I'm {0} years old.".format(name, age)) POSITIONAL ARGUMENT.
+
+19> print("My name is {1} and I'm {age} years old.".format(age=26, "Venky")) [KEYWORD ARGUMENT].
+
+20> FIST POSITIONAL THEN KEYWORD ARGUMENT.
+
+21> print("Class ends around {:d} AM".format(9)) [EXPECTING INTEGER ARGUMENT]
+
+22> print("Float value is given by {:f} ".format(120.4568976))
+    print("Float round off to 2 digits: {:.2f} ".format(120.4568976))
+    print("Float round off to 2 digits: {:.3f} ".format(120.4568976))  [EXPECTING THE FLOAT ARGUMENT]
+
+23> print("Left Alignment Integer: {:<5d}".format(12))
+    print("Right Alignment Integer: {:>5d}".format(12))
+    print("Center Alignment Integer: {:^5d}".format(12))
+
+    print("Left Alignment Integer: {:<05d}".format(12))
+    print("Right Alignment Integer: {:>05d}".format(12))
+    print("Center Alignment Integer: {:^05d}".format(12))
+    print("Center Alignment Integer: {:^06d}".format(12))
+    print("Center Alignment Integer: {:^07d}".format(12))
+
+    Left Alignment Integer: 12   
+    Right Alignment Integer:    12
+    Center Alignment Integer:  12  
+    Left Alignment Integer: 12000
+    Right Alignment Integer: 00012
+    Center Alignment Integer: 01200
+    Center Alignment Integer: 001200
+    Center Alignment Integer: 0012000
+
+24> print("Left Alignment Integer: {:*<20}".format("Venkatesh"))
+    print("Right Alignment Integer: {:#>20}".format("Venkatesh"))
+    print("Center Alignment Integer: {:0^20}".format("Venkatesh"))
+
+    Left Alignment Integer: Venkatesh***********
+    Right Alignment Integer: ###########Venkatesh
+    Center Alignment Integer: 00000Venkatesh000000
+
+25> 1,000,000+1,000 IT WILL BEHAVE AS TUPLE
+
+26> 1_000 + 1_000 THIS IS FOR READABILITY PURPOSE.
+
+27> print("Binary Value: {0:b}, Oct Value: {0:o}, Hex Value: {0:x}".format(12))
+    print("Binary Value: {:b}, Oct Value: {:o}, Hex Value: {:x}".format(12, 14, 15))
+    //Binary Value: 1100, Oct Value: 14, Hex Value: c
+    Binary Value: 1100, Oct Value: 16, Hex Value: f
+
+28> name = "Virat"
+    age = 35
+    print(f"Hello {name} and your age is {age} now")
+    print(F"Hello {name} and your age is {age} now")
+
+    //Hello Virat and your age is 35 now
+    Hello Virat and your age is 35 now
+
+
+========================================================= LECTURE 10 STRING METHOD-OVERVIEW ===========================================================
+
+1>  strip, lstrip, rstrip, split, rsplit, join, replace, upper, lower, isupper, islower, capitalize, isalpha, isnumeric, isalnum, count, find, rfind, index, rindex
+
+2>  STRIP FUNCTION WILL REMOVE THE SPACE FROM BEGNING AND END OF STRING, str.strip()
+
+3>  IF WE PASS ANY CHARACTER INTO STRIP FUNCTION IT WILL LOOK FOR THAT CHARACTER ONE BY ONE IN MAIN STRING AND IF ANY CHARACTER IS MISSED THEN IT STOP THERE ONLY AND ALSO 
+    AT BEGNING AND END ONLY. LETS TAKE ONE EXAMPLE.
+    
+    S = .a..Rohit Sharma..b.
+    S.STRIP(".Ra")  // 'ohit Sharma..b'  ---> as u can see it it start searching all character until the first char it unmacth then it will stop.
+
+4>  BY DEFAULT SPLIT FUNCTION TAKES SPACE AS SEPRATOR
+    
+    l = "Hi I   am Mr   Keats"
+    l.split()  //   ['Hi', 'I', 'am', 'Mr', 'Keats']
+
+
+5>  IF YOU PROVIDE ANY CHARACTER THEN SPLIT FUNCTION WILL SPLIT THE STRING BASED ON THAT CHARACTER ONLY.ALSO THERE IS ANOTHER ARGUMENT IN SPLIT FUNCTION WHICH IS
+    MAXSPLIT WHICH SPLIT THE STRING MAX OF MAXSPLIT TIME SEE THE EXAMPLE.
+
+    L = "All The best for Gate 2025 DA"
+    L.split(" ",maxsplit=2)  //['All', 'The', 'best for Gate 2025 DA']  [AS U CAN SEE THE IT SPLIT THE STRING  MAXIMUM OF 2 TIME ONLY]
+
+6>  rsplit() split the string from right hand side and if we dont give any maxsplit ARGUMENT then it will split all string based on given parameter default will be space.
+
+7>  join function should take iterable of string.
+    l = ["python","is","going","good"]
+    " ".join(l) // python is going good.   --> here we list of string so it fine here 
+
+8>  let's take one more example,
+    s = "suraj"
+    "-".join(s) // s_u_r_a_j
+
+9>  dir() func used to know all the method associoated with string.
+
+10> REPLACE TAKES 2 ARGUMENT ONE WHICH IS GET REPLACE AND OTHER BY WHICH IT GET REPLACE, SEE EXAMPLE
+    
+    ind_players = "Virat, Rohit, Sky, Pant, Shivam Dube, Hardik, Jadeja, Bumrah, Shubham Dube"
+    ind_players.replace('Dube', "Rinku")
+    //  Virat, Rohit, Sky, Pant, Shivam Rinku, Hardik, Jadeja, Bumrah, Shubham Rinku
+
+11> ALSO WE KNOW THAT STRING IS IMMUTABLE SO EACH TIME WE SO ANY OPERATION A NEW STRING WILL CREATED.
+
+12> REPLACE FUNCTION TAKE ANOTHER ARGUMENT WHICH SPECIFY THE NUMBER OF INSTANCE REMOVED SEE BELOW EXAMPLE.
+
+    ind_players = "Virat, Rohit, Sky, Pant, Shivam Dube, Dube, Dube, Dube, Hardik, Jadeja, Bumrah, Shubham Dube"
+    ind_players.replace('Dube', "Rinku", 2)         /// 'Virat, Rohit, Sky, Pant, Shivam Rinku, Rinku, Dube, Dube, Hardik, Jadeja, Bumrah, Shubham Dube'
+
+13> lower() and upper() function will convert all letter in lower case and upper case respectively.
+
+14> islower() func will return false if even one character is in upper case. it will be oppsite for isupper() function.
+
+15> capitalize func will take ONLY first index and convert it into upper case letter and make all letter small even if it is capital.
+
+    s = "Lokes Name"   // "Lokes name"
+
+16> swap() function convert capital to small and vice-versa.
+
+17> isalpha() func check for only alphabet in string if any other character are there it will return fasle.
+
+    l = "code+red"  // Fasle as there is '+' char here.
+
+18> isnumberic() func will take digit from 0-9 and if there is float or negative number then it will not print true.
+
+    "-12" //fasle
+    "2.3" // false
+    "23"// true
+
+19> isalnum() fun look for only number and alphabet otherwise it will print fasle.
+
+20> count() func look for the substring which exactly MATCH with string which pass in count func and give the number of occurence of that string.
+
+21> also count func take 2 more ARGUMENT start and end index to look only in this range and end index will not included.
+    
+    s = "HI this is my name of kane sjakmf ackncd"
+    s.count('i',3,10) 
+
+22> find() func will take the first occurence of string and print the index if substring is not found then -1 will be return.
+
+23> rfind WILL PRINT THE LAST INDEX OF MATHCED SUBSTRING. AND IF NOT FOUND THEN RETURN -1.
+
+24> INDEX AND RINDEX IS SAME BUT THERE IS ONE DIFFERECE IF SUBSTRING IS NOT FOUND IN STRING THE IT WILL THROW ERROR.
+
+
+===================================================== LECTURE 11 LIST OPERATION  ======================================================================
+
+1>  APPENDED FUCNTION TAKES ONLY SINGLE PARAMETER.
+
+2> INSERT TAKE TWO ARGUMENT ONE IS INDEX AND OTHER DATA
+
+3>  INSERT AND APPEND METHOD RETURN NONE.
+
+4>  IF U TRY TO INSERT THE VALUE USING NEGATIVE INDEX IT WILL INSERT A INSEX BEFORE THAT LOOK EXAMPLE BELOW
+    l = [1,2,3,4,5,6]
+    l.insert(-2, 'abc')
+    print(l)  //    [1, 2, 3, 4, 'abc', 5, 6]
+
+5>  EXTENS METHOD USE TO ADD MULTIPLE ELEMENT AR ONCE BUT DATA SHOULD BE PASSED USING ITERABLE LIKE LIST OR TUPLE OT SET ETC.
+
+6>  players = ["Rohit", "Jaiswal", "Virat", "Pant", "Sky", "Dube", "Hardik", "Jaddu"]
+    print(players)
+    players[5:] = "Rinku"
+    print(players)
+
+    // ['Rohit', 'Jaiswal', 'Virat', 'Pant', 'Sky', 'Dube', 'Hardik', 'Jaddu']
+    ['Rohit', 'Jaiswal', 'Virat', 'Pant', 'Sky', 'R', 'i', 'n', 'k', 'u']
+
+    players = ["Rohit", "Jaiswal", "Virat", "Pant", "Sky", "Dube", "Hardik", "Jaddu"]
+    print(players)
+    players[5:] = ["Rinku"]
+    print(players)
+
+    //  ['Rohit', 'Jaiswal', 'Virat', 'Pant', 'Sky', 'Dube', 'Hardik', 'Jaddu']
+    ['Rohit', 'Jaiswal', 'Virat', 'Pant', 'Sky', 'Rinku']
+
+7>  REMOVE FUNCTION TAKE DATA WHICH NEED TO deleteD AND IF THE ELEMENT DON'T FOUND THEN IT WILL THROW THE ERROR. IF THE MULTIPLE INSTANCE ARE THRE FOR SAME ELEMENT THEN
+    ONLY ONE WHICH IS FIRST ELEMENT WILL BE GET DELETED.
+
+8>  DEL TAKE INDEX OF LIST TO DELETE IT EXAMPLE ==> DEL L[3]
+
+9>  l = [1,2,3,4,5]
+    print(l)
+    del l[1:4]
+    print(l)
+
+    //[1, 2, 3, 4, 5]
+    [1, 5]
+
+10> DEL L DELETE THE ENTIRE LIST
+
+11> clear EMPTYED THE LIST
+
+12> DEL L[::] == L.CLEAR()
+
+13> BY DEFAULT POP METHOD REMOVE THE LAST ELEMENT OTHERWISE IF U GIVE INDEX IT WILL DELETE THAT ELEMENT AND ALSO RETURN THE POPED ELEMENT.
+    AND INDEX SHOULD BE VALID INDEX OTHERIWSE ERROR WILL THROW.
+
+====================================================== LECTURE 12 TUPLE,SETS AND FROZEN SETS ================================================================
+
+1>  T = () AND T = tuple() THESE ARE THE WAY TO INITIALIZEING THE TUPLE.
+
+2>  t = 1, and t = (1,) represent the tuple while t = 1 and t = (1) represent the integer assignment.
+
+3>  t2 = ("a","b","c") this is called tuple packing
+
+4>  i,j,k = ("a","b","c") this is called tuple unpacking
+
+5>  a,b = (1,2,3,4,5,6,7) invalid too many value to unpack.
+
+6>  a, *b = (1,2,3,4,5,6,7)
+    print(a)    // 1
+    print(b)    // [2,3,4,5,6,7]
+    print(type(a))  // int
+    print(type(b))  // LISTS
+
+7>  WE CAN'T USE THE MULTIPLE STAR IN EXPRESSION FOR EXAMPLE.
+    //  a, *b, c, *d = (1,2,3,4,5,6,7)  INVALID.
+
+8>  a,b = [1,2,3]   // ERROR
+
+9>  WHILE UNPACKING THE TUPLE THERE MUST BE NUMBER IF VARIABLE AND VALUE MUST BE SAME.
+
+10> a, *b = [1,2,3]
+    print(a)
+    print(b)
+    print(type(a))
+    print(type(b))  // VALID
+    //1
+    [2, 3]
+    <class 'int'>
+    <class 'list'>
+
+11> WE CAN ACCESS THE TUPLE AND SLICE IT USING [] BRACKET.
+
+12> WE CAN'T CHNAGE THE VALUE IN TUPLE.
+
+13> IF THERE IS LIST INSIDE THE TUPLE THEN CAN CHNAGE THE LIST AND TUPLE WILL BE IN SAME MEMORY LOCATION.
+
+14> HAVE A CLOSE LOOOK TO POINT 37 IN JUPYTER NOTEBOOK.
+
+15> THERE IS NO SUCH THING UPDATING TUPLE, BUT WE CAN HACK THIS BY CONVERTING INTO LIST AND THEN UPDATING IT AND CONVERT IT INTO TUPLE.
+
+16> DEL KEYWORD USE TO DELETE THE ENTIRE TUPLE BUT CAN'T USE TO DELETE THE ELEMENT INSIDE THE TUPLE.
+
+17> SORTING IS INPLACE WHILE SORTED IS OUT ODF PLACE SORTING.
+
+18> l = [1,2,3,5,7,9,4]
+    sorted(l, reverse = True)   // TO SORT IN DESCENDING ORDER.
+
+19> t = (1,2,3,5,7,9,4,12,10)
+    t.sort() # will fail becoz tuple can't be modify but sort is inplcae algorithm.
+
+20> IF WE SORTED TO SORT THE TUPLE IT WILL RETURN LIST.
+
+21> REVRESE FUNCTION DO IMPLACE REVERSEING 
+
+22> REVERSED FUNCTION DON'T USE INPLACE REVERSING AND IT RETURN THE OPERATOR ALSO IT RETURN THE LIST.
+
+23> CONT FUNCTION RETURN THE NUMBER OF INSTANCE PRESENT IN THE LIST/TUPLE IF THERE IS NOT INSTANCE THEN IT WILL RETURN 0 NOT THROWING ERROR.
+
+
+
+
+24> S = {} IT NOT A SET TO INTIALIZE THE SET USE THIS CODE S = set();
+
+25> SET ELEMENT CAN'T BE MODIFY BUT WE CAN ADD OR REMOVE THE ELEMENT.
+
+26> SET DON'T HAVE DUPLICATE ELEMENT.
+
+27> SET CAN'T BE INDEXED AS IT DOESN'T GET INTO ORDER AS WE INSERT THEM.
+
+28> s = {2} this is set.
+
+29> SET IS MUTABLE AS WE CAN ADD/REMOVE THE ELEMENT FROM SET.
+
+30> t = (2,3,4,[3,5])
+    s = {1,2,t}
+    print(s)
+    // SHOULD NOT BE LIST INSIDE THE TUPLE.
+
+31> WE CAN'T ACCESS THE ELEMENT OF SET UsING SQUARE BRACKET.
+
+32> ADD FUNCTION TAKES ONLY ONE PARAMETER.
+
+33> s = {10,20,30}  // TO UPDATE THE SET WITH THIS ELEMENT as individual not as some list or set or tuple.
+    # update
+    t = {40,50,60}
+    s.update(t) 
+    print(s)    {10,20,30,40,50,60}
+
+34> UPDATE METHOD UPDATE THE EXISTING SET WHILE UNION METHOD RETURN THE NEW SET.
+
+35> UNION METHOD WON'T UPDATE S[HAVE REASSIGN] UPDATE METHOD WILL UPDATE THE S.
+
+36> REMOVE FUNCTION THROW AN ERROR WHEN IT DOESN'T FIND THE KEY.
+
+37> DISCARD FUNCTION WON'T THROW ERROR IF ELEMENT ARE NOT PRESENT IN SET.
+
+38> UNION REPRESENT BY THIS SYMBOL |
+
+39> FROM SET OPERATION U CAN CHECK JUPYTER NOTEBOOK.
+
+===================================================== LECTURE 13 DICTIONARY OPERATION  ======================================================================
+
+1>  DICTIONARY DON'T ALLOW THE DUPLICATE KEY.
+
+2>  DICTIONARY IS ORDERED MEANS AS WE PUT THE ITEM IT WILL REFLECT IN SAME ORDER.
+
+3>  d = {} this is how we intialize the dictionary, it is not set
+
+4>  DICTIONARY IS NOT INDEXED BY SEQUENCE.
+
+5>  AS WE KNOW DICTIONARY DON'T ALLOW THE DUPLICATE KEY SO WE PROVIDE DUPLICATE KEY IT WILL ELEMINATE IT.
+    
+    # 1, 1.0, True are treated same
+    # 0, 0.0, False are treated same
+    d = {1: 'A', 1.0: "F", True: 'B', 0: 'Z', 0.0: 'FZ', False: 'BZ'}
+    print(d)        //  {1: 'B', 0: 'BZ'}
+
+6>  ALSO NOTICE IN ABOVE CODE THAT WHEN THE KEY DUPLICATE FOUND IT WILL UPDATE THE VALUE THAT WHY 'B' IS PRINTED AS VALUE NOT 'A'.
+
+
+7>  d1 = dict(A = 10, B = 12, AB =5 0, D=[12,30])
+    print(d1)
+    print(type(d1)) // {'A': 10, 'B': 12, 'AB': 50, 'D': [12, 30]}    --> IN THIS TYPE OF INTIALIZATION KEY MUST BE A ALPHABET.
+
+8>  DICTIONARY IS MUTABLE MEANS IF WE CHANGE SOMETHING IN DICTIONARY THEN ITS MEMORY LOCATION WON'T CHNAGE.
+
+9>  IF WE WANT TWO DICTIONARY OF SAME KEY VALUE PAIR USE COPY METHOD TO CERATE THE DICTIONARY IT WILL CREATE DICTIONARY IN OTHER MEMORY LOCATION RATHER THAN REFERENCE
+    THE OLDER ONE.
+
+10> d1 = {'A': [10,20,30], 'B': 20, 'C': 30}
+    d2 = d1.copy()
+
+    print(d1)
+    print(d2)
+
+    d1['A'][1] = 100
+
+    print(d1)
+    print(d2)
+
+    //  {'A': [10, 20, 30], 'B': 20, 'C': 30}
+        {'A': [10, 20, 30], 'B': 20, 'C': 30}
+        {'A': [10, 100, 30], 'B': 20, 'C': 30}
+        {'A': [10, 100, 30], 'B': 20, 'C': 30}
+
+        EVEN IF USE COPY METHOD AND TRY TO CHNAGE THE FIRST KEY'S VALUE WHICH IS LIST IT EFFECT THE SECOND DICTIONARY D2 TO OVERCOME THIS WE DO DEEP COPY METHOD.
+
+        import copy
+
+        d1 = {'A': [10,20,30], 'B': 20, 'C': 30}
+
+        d2 = copy.deepcopy(d1)
+
+        print(d1)
+        print(d2)
+
+        d1['A'][1] = 100
+
+        print(d1)
+        print(d2)
+
+        //{'A': [10, 20, 30], 'B': 20, 'C': 30}
+            {'A': [10, 20, 30], 'B': 20, 'C': 30}
+            {'A': [10, 100, 30], 'B': 20, 'C': 30}
+            {'A': [10, 20, 30], 'B': 20, 'C': 30}    // NOW CHANGE IN D1 WILL NOT EFFECT D2.
+
+11> D1 = D2 WILL REFERECE THE SAME DICTIONARY AND D.COPY() AND DICT(D1) BOTH WILL BE CREATE DICTIONARY IN DIFFERENT MEMORY LOCATION AND IT IS SALLOW COPY.
+    TO CREATE THE DEEP COPY IMPORT COPY MODULE AND USE AS SHOWN IN POINT 10.
+
+12> CREATING THE DICTIONARY USING ITERATBLE,
+    
+    d = dict([("a",2), ("b", 4), ("c", 10), (100,"d")])
+    d = dict((("a",2), ("b", 4), ("c", 10), (100,"d")))
+
+    ONE USING LIST AND SECOND ONE USING TUPLE.
+
+13> students = ['venky', 'viky', 'abi', 'sai', 'vasanth']
+    d = dict.fromkeys(students, 0)
+    print(d) // {'venky': 0, 'viky': 0, 'abi': 0, 'sai': 0, 'vasanth': 0}  SECOND ARGUMENT IS optional BY DEFAULT NONE WILL BE ASSIGN TO VALUE.
+
+14> DICTIONARY INSIDE DICTIONARY IS POSSIBLE.
+
+15> IN DICTIONARY WE CAN'T USE THE MUTABLE[LIST,SET,DICTIONARY] DATATYPE AS KEY BUT WE CAN USE IMMUTABLE DATATYPE[TUPLE].
+
+16> d = {(12,30,40): 'b', [12,30,40]: 'c'} # list as a key is not possible
+    print(d)    // IN KEY THERE LIST INSIDE TUPLE SO THIS CODE WILL THROW ERROR BUT IF THERE IS ONLY TUPLE THEN IT WILL NOT THROW ERROR.
+
+17> d.items() return tuple of key value pair.
+
+18> get() method return value when key is present and when key is not present then it return NONE.
+
+19> gets method also take another ARGUMENT which result in output when key dont found d.get("sky",-1)
+
+20> d = {"Virat": 55.4, "Rohit": 46.9, "Sachin": 60.9}
+    d['Virat'] = [100,56,78] # keys in dictionary needs to be unique
+    print(d) // this is how we update the dictionary
+
+21> my_dict.update(name = "Viky", age = 30)
+    print(my_dict) // usse to update the dictionary.
+
+22> del keyword use ti delete the item from dictionary and also it can delete all the dictionary ITSELF.
+
+23> clear func clear the dictionary and make them empty.
+
+24>  POP FUNCTION REMOVE THE ITEM FROM DICTIONARY AND RETURN THE VALUE OF THE KEY AND IF KEY DON'T FOUND IN DICTIONARY THEN IT WILL THROW ERROR
+    SO AVOID THROWING ERROR U CAN PASS SECOND ARGUMENT IN POP FUNCTION WHICH RETURN WHEN KEY NOT EXIZR IN DICTIONARY.
+
+    d = {"keats" : 10, "salazar": 20, "kane":30};
+    s.pop("ramesh",100) // 100 will print as key dont exist in dictionary.
+
+25>  popitem() delete the last item from dictionary and return the tuple of key value.
+    d = {"keats" : 10, "salazar": 20, "kane":30};
+    s.pop("ramesh",100) // ("kane", 30) will print as key dont exist in dictionary.
+
+
+============================================ LECTURE 14 APPLICATION OF LIST,TUPLE,SET AND DICTIONARY  ========================================================
+
+
+1>  
+
+
+
+========================================================= LECTURE 17 FUNCTION ========================================================
+
+1>  WE ARE ALLOW TO NOT WRITE RETURN STATEMENT IN FUCNTION BY DEFAULT IT IS 'NONE' TYPE.
+
+2>  IF WE HAVE LARGE NUMBER OF ARGUMENT THEN WE CAN USE FUNCTION_NAME(*S) LIKE THIS, THIS WILL TAKE N NUMBER OF ARGUMENT IN TUPLE.
+
+3>  WE CAN PASS THE ARGUMENT USING POSITIONAL OR KEYWORD ARGUMENT, CHECK JUPYTER NOTEBOOK FOR DETAILS.
+
+4>  IN KEYWORD ARGUMENT NAME OF ARGUMENT SHOULD MATCH WHILE PASSING TO FUNCTION.
+
+5>  FUNCTION_NAME(**KWARGS) THIS CODE TAKES KEYWORD ARGUMENT, IF WE TRY TO PASS POSITIONAL ARGUMENT THIS WILL THROW AN ERROR.
+    FUNCTION_NAME(NAME='KEATS', AGE= 20) THIS SHOULD BE FORMAT WHILE PASSING THE ARGUMENT AND IT TAKE AS DICTIONARY.
+
+6>  DEFAULT ARGUMENT FUNCTION_NAME(COUNTRY='INDIA'): PASS
+
+7>  NON-DEFAULT ARGUMENT COMES FIRST THAN DEFAULT ARGUMENT
+
+8>  IF WE WANT ONLY POSITIONAL ARGUMENT ARE GET PASSED THEN USE THIS CODE FUNCTION_NAME(a,/): PASS
+
+9>  LIKEIWSE THE POSITIONAL-ONLY ARGUMENT THERE IS KEYWORD-ONLY ARGUMENT WHERE ONLY KEYWORD ARGUMENT ARE ALLOWED TO PASS AND THE CODE IS FUNCTION_NAME(*,A,B,C)
+
+10> NOW WE CAN COMBINE THE POSITIONAL AND KEYWORD ARGUMENT BOTH , AND CODE WILL LOOK LIKE
+    DEF POSKEY(a,b,/,*,x,y):
+        PASS
+    
+    AND POSITIONAL ARGUMENT COMES FIRST THAN KEYWORD ARGUMENT.
+
+11> DOCSTRING MUST BE JUST BELOW THE FUNCTION NAME OTHERIWSE IT WILL TREATED LIKE MULTI-LINE COMMENT IF PUTTING OTHER PLACES. IF WE JUST WRITE FUNCTION NAME WITHOUT 
+    PARENTHESIS OR HELP(FUNCTION NAME ) THEN IT WILL SHOW THE DOCSTRING IF PRESENT INSIDE THE FUNCTION.
+
+12> --> TUPLE,INT,STRING,FROZENSET THESE ALL ARE IMMUTABLE DATA TYPE MEANS ONCE U TRY TO CHNAGE THEIR CONTENT IT WILL CHNAGE THEIR MEMORY LOCATION.
+        MEANS IF DOING ANY OPERATION IT WILL CHNAGE THE MEMORY LOCATION.
+
+13> FOR MUTABLE DATATYPE IF U CHANGE THE CONTENT INSIDE THE FUNCTION IT WILL REFLECT THE CHNAGE OUTSIDE THE FUNCTION AS WELL. BUT IT IS NOT TRUE FOR IMMUTABLE DATATYPE.
+
+    def fun(a):
+        print(id(a))
+        a = [12,1,3]
+        print(a,id(a))
+
+    b = 234
+    print("outside", id(b))
+    fun(b)
+    print(b,id(b))
+
+    outside 134641879506448
+    134641879506448
+    [12, 1, 3] 134640596928640
+    234 134641879506448
+
+
+
+========================================================= LECTURE 18 SCOPE OF VAIRABLE ========================================================
+
+1>  def func_d():
+        print("Global Variable d : ", d)
+        d += 500
+        print("Changing d inside the function: ",d)
+
+    d = 1000
+    print("Initializing d: -->", d)
+    d += 500
+    print("Modifying d: -->", d)
+    func_d()
+    print("Outside function, d changed to : ", d)
+
+    here we try to modify the d in func_d() function so this will give error as d is global variable can mofdify it but we can use 'global' keyword and try to
+    modify it, it will work then.
+
+    def func_d():
+    global d   // assinging d as global vraible.
+        print("Global Variable d : ", d)
+        d += 500
+        print("Changing d inside the function: ",d)
+
+    d = 1000
+    print("Initializing d: -->", d)
+    d += 500
+    print("Modifying d: -->", d)
+    func_d()
+    print("Outside function, d changed to : ", d)
+
+
+2>  WHEN WE TRY TO PASS VARIABLE D IN FUNCTION THEN IT ALLOW ME TO CHNAGE THE VARIBLE D BUT AS SOON AS WE LEAVE THE FUNCTION THE UPDATE VALUE WILL DISAPPEAR.
+
+
+
+3>  OUTER FUNCTION CAN CALL THE INNER FUNCTION AND INNER FUNCTION CAN ACCESS THE PARAMETER IF OUTER FUNCTION.
+
+4>  def func_outer():
+        x = 1000
+        y = 2000
+        def func_inner():
+            x += 10000     --> // ERROR WILL GENERATE AS WE ARE TRY TO MODIFY THE GLOBAL VARIABLE/OUTER FUNCTION VAIRABLE WHICH ARE NOT ALLOWED.
+            print("Accessing outer func variables: x -> {}, y ->{}".format(x,y))
+        func_inner()
+
+    func_outer()
+
+    WE ARE ONLY ALLOW TO ACCESS THE OUTER FUNCTION VARIABLE BUT NOT MODIFYING IT.
+
+5>  def func_outer():
+        # code block - outer func
+        x = 1000
+        y = 2000
+        def func_inner():
+            global x            WE ARE ALLOWED TO DO DEFINE THIS HERE EVEN WE DIDN'T DEFINE THE X OUTSIDE OF ALL THE FUNCTION.
+            x = 5000
+            x += 10000
+            print("Inner func: x -> {}, y ->{}".format(x,y))        //15000 AND 2000
+        func_inner()
+        print("Outer Func: x-->", x)  HERE X = 1000 WILL PRINT AS IT TAKE LOCAL VALUE OF X AS IT DEFINE INSIDE THE FUNCTION.
+
+    func_outer()
+    print("x outside the outer/main function : x ->", x)    // 15000
+
+6>  def outer():
+        v = 500
+            def inner():
+                global rohit
+                rohit = 10
+                print(v,rohit)
+        inner()
+        rohit  = 20
+        print(rohit)
+
+    outer()
+    print(rohit)
+     
+7>  IN NESTED FUNCTION WE CAN't WE CANT CALL INNER FUNCTION FROM OUTSIDE OUTER FUNCTION SEE BELOW CODE
+
+    def outer():
+        v = 500
+            def inner():
+                global rohit
+                rohit = 10
+                print(v,rohit)
+        inner()
+        rohit  = 20
+        print(rohit)
+
+    inner() can't call the inner function from here.
+
+8>  NON-LOCAL VAIRABLE ARE USED IN NESTED FUNCTION WHOSE LOCAL SCOPE IS NOT DEFINED THIS MEANS THAT VARIABLE CAN BE NEITHER BE IN THE LOCAL NOR GLOBAL
+    SCOPE. TO CREATE THE NON LOCAL VARIBLE USING NONLOCAL KEYWORD. SEE THE BELOW CODE
+
+    def func_outer():
+    v2 = 1000 # local variable to outer function
+    def func_inner():
+        nonlocal v2
+        v2 += 1000      // AS WE DEFINE THE NONLOCAL AND BIND IT TO V2 NOW WE ALLOW TO UPDATE V2.
+        print("Inner func: v2 -> {}".format(v2))
+    func_inner()
+    print("Outer Func: v2-->", v2) # v1 -> 2000
+
+    func_outer()
+
+
+9>  IN NESTED FUNCTION, INNER FUNCTION CAN CALLED BY IMMEDIATE OUTER FUNCTION OTHER ERROR WILL THROW.
+
+
+10> #----> This is how we access the inner function from outside the outer function
+    def outer():
+        val = 90
+        def inner():
+            print("Hi, Keats")
+        
+        global expose_inner
+        expose_inner = inner
+
+    outer()
+    f1 = expose_inner
+    f1()
+
+11> 'higher order function'
+
+    def calculate(a,b, operation):
+        print(operation)
+        return operation(a,b)
+
+    def add(a,b):
+    return a+b
+
+    def sub(a,b):
+    return a-b
+
+    def multiply(a,b):
+    return a*b
+
+    calculate(10,15,sub)
+
+
+12> WE CAN USE MULTIPLE OPERATION AT ONCE SEE BELOW CODE
+    def calculate(a,b, *operation): // TAKE ANY NUMBER OF FUNCTION AS IT IS *OPERATION THERE
+        print(operation)
+        return operation[0](a,b), operation[1](a,b), operation[2](a,b)
+
+    def add(a,b):
+    return a+b
+
+    def sub(a,b):
+    return a-b
+
+    def multiply(a,b):
+    return a*b
+
+    calculate(10,15,sub,add, multiply)
+
+========================================================= LECTURE 19 RECURSIVE FUNCTION ========================================================
+
+1>  FUNCTION CALLED ITSELF DIRECTLY OR INDIRECTLY NAMED IT RECURSIVE FUNCTION
+
+2>  HEAD RECURSION MEANS THE RECURSIVE FUNCTION CALLING IS AT BEGNING AND TAIL RECURSION MEANS RECURSIVE FUCNTION CALLING IS AT END OF THE FUNCTION.
+
+3>  HEAD RECURSION, TAIL RECURSION, DIRECT RECURSION, INDIRECT RECURSION, FINITE RECURSION AND INFINTE RECURSION.
+
+4>  NESTED RECURSION AND SOLVE A VERY GOOD PROBLEM.
+
+
+========================================================= LECTURE 20 PS ON RECURSIVE FUNCTION ========================================================
+
+1>  CAN WATCH ALL THE QUESTION OF THIS LECTURE AGAIN IT WILL BE BENIFICIAL.
+
+2>  CONTENT OD THIS LECTURE WAS FIBBONACCI PROBLEM DRY RUN AND TWO GATE PROBLEM AND 2 OTHER GOOD PROBLEM.
+
+
+
+========================================================= LECTURE 21 ADVANCE FUNCTION AND PS ========================================================
+
+1>  LAMBDA IS ANONYMOUS FUNCTION WHICH MEANS THERE IS NO NAME TO A FUNCTION.
+
+2>  PEOPLE USE LAMBDA FUNCTION FOR ONE TIME USE OR DO IT IN SINGLE LINE.
+
+3>  a = lambda : 10
+    b = a() // then type of b will be <class:int> becoz it will act as FUNCTION WHICH return 10 which is equivalent to below normal function,
+
+    def func():
+        return 10;
+
+
+4>  a = lambda : print(10)
+    b = a() // then type of b will be <class:NONETYPE> it act as function which dont return anything and the equivalent normal function is given below 
+
+    def func():
+        print(10)
+
+
+5>  a  = lambda : 10 here a will be function and if b = a() here b will be value return by lambda function.
+
+6>  def func(a):
+        return lambda n: a*n
+    
+    lam = myfun(2) // here lam is the function return by myfunc then
+
+    lam(3) // this will output the answer as 6.
+
+
+7>  FILTER TAKES TWO ARGUMENT ==> FILTER(FUNCTION,ITERABLE)
+    def func(a):
+        if(a > 18):
+            return False
+        else:
+            return a+12
+
+
+    l = [1,2,7,8,9,34,3,12,4,45,45]
+    print(list(filter(func,l)))
+
+    filter function only see the true and false part that's why even adding to a in else  block won't change the list l and be carefull filter func
+    will return iterator object so we must convert it into list by typecasting.
+
+    also filter will filter the list after function gets EXECUTED that why while changiong code to a-12 in else part will not take 12 as output but it will take 
+    when we will do a+12.
+
+
+8>  MAP TAKES 2 ARGUMENT ==> MAP(FUNCTION,ITERABLE)
+
+    MAP IS SAME LIKE FILTER FUNCTION BUT IN MAP IF THE OUTPUT IS NONE THEN IT ALSO ADDED TO OUTPUT BUT THIS IS NOT CASE IN FILTER.
+
+    def func(a):
+        if a > 18:
+            return False
+    
+    number = [1,2,9,12,18,20,25,40,50]
+    map_num = list(map(myfun, number))
+    print(map_num)
+
+
+9>   ALSO IF WE WANT TO CHANGE THE ELEMENT IN LIST THEN WE CAN USE MAP FUNCTION
+
+    map_score = list(map(lambda x: x+7, score)) this will add 7 to all the number also i want it add 7 to specific number then we can use this code
+
+    map_score = list(map(lambda x: x+7 if x> 40 else x, score))
+
+
+
+
+    REAMRK : LOOK POINT 5 WHICH IS ABSTRACT OF POINT 3 AND 4, AND ALSO LOOK POINT NUMBER 6.
+
+=================================================================================================================================================================
+
+
+
+========================================================================   SCALER   ====================================================================================
+
+1>  s = "My PO Box number is 310"
+    s.isalnum() // returun false becoz od space.
+
+2>  class Employee:
+
+        def __init__(self, name, val):
+            self._name=name
+            self._salary=val    // writing one _ to denote private and protected member of class.
+
+    e1=Employee("Rahul",200)
+    print(e1._salary)
+
+3>  S.SPLIT('E', MAXSPLIT = 2) OR S.SPLIT('E',2)  BOTH CAN BE USE TO SPLIT THE STRING WHRE E PRESENT.
+
+4>  "python".join("@") // @
+
+5>  l = int(str(1.3))   // ERROR
+
+=====================================================================================================================================================================
