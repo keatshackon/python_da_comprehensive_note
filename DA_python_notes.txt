@@ -18,7 +18,9 @@
 
 1>  THERE ARE 35 KEYWORD IN PYTHON LANGUAGE.
 
-2>  
+2>  CAN'T USE KEYWORD AS VARIABLE.
+
+3>  
 
 
 
@@ -944,11 +946,96 @@
 
     REAMRK : LOOK POINT 5 WHICH IS ABSTRACT OF POINT 3 AND 4, AND ALSO LOOK POINT NUMBER 6.
 
-=================================================================================================================================================================
+
+========================================================= LECTURE 23 MODULE,TYPES OF ERROR & EXCEPTIOAN HANDLING ==================================================
+
+1>  PYTHON IS BOTH COMPILED AND INTERPRETER LANGUAGE.
+
+2>  TO GENERATE THE COMPILED FILE USE THIS COMMAND ==> python -m py_compile programme_name.py AND TO EXECUTED THE CREATED FILE USE THIS COMMAND 
+    python file_name.pyc
+
+3>  AOT MEANS AHEAD OF TIME WHICH MEANS FIRST COMPILATION HAPPEN ANS THEN EXECUTION HAPPEN.
+
+4>  JIT MEANS JUST IN TIME COMPILER. IT EXECUTES LINE BY LINE IMMEDIATELY AFTER COMPILATION WHICH IS ALSO DONE LINE BY LINE.
+
+5>  PRECEDURAL PROGRAMMING CONCEPT MEANS THERE WILL BE SET IN INSTRUCTION
+
+6>  FUNCTION PROGRAMMING MEANS THERE WILL BE A BLOCK OF CODE TO EXECUTE THE TASK.
+
+7>  OOPS PROGRAMMING CONCEPT IS THE GAME CLASS AND OBJECT.
+
+8>  __name__ IS THE SPECIAL VARIABLE WHICH IS MANAGED BY PYTHON AND IT WILL AUTOMATICALLY SET ITS VALUE TO __MAIN__ IF THE SCRIPT IS BEGIN RUN  DIRECTLY.
+
+9>  TO UNDERTAND __NAME__ OR __MAIN__ WATCH 10 MIN VIDEOS IT WIIL MAKE U UNDERSTAD BETTER.
+
+
+========================================================================   LECTURE-24 PYQ   ========================================================================
+
+1>  a = 1000
+
+    def f(x=a):
+        z = 10
+        y = x*z
+        print(y)
+    
+    a = 5
+    f() // 10000 
+
+    IN THE FUNCTION CALL a WILL BE ASSIGNED WITH 1000 NOT 5 AS PYTHON EXECUTE CODE LINE BY LINE AND FROM TOP TO BOTTOM.
+
+2>  def f2():
+    x = 50
+    def inner_f2():
+        nonlocal x
+        x += 1
+        return x
+    return inner_f2
+
+  // EVERYTIME WE CALL FUNCTION 2 IT WILL INCREAMENT THE VALUE OF X BY 1.
+
+3>  WATCH QUESTION NUMBER 5 AGAIN.
 
 
 
-========================================================================   SCALER   ====================================================================================
+========================================================================   LECTURE-25 PYQ   ========================================================================
+
+
+1>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+========================================================================   SCALER-PRACTICE   ========================================================================
 
 1>  s = "My PO Box number is 310"
     s.isalnum() // returun false becoz od space.
